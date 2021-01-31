@@ -59,5 +59,15 @@ pipeline{
                 }
             }
         }
+        stage('Deploy Kubernetes') {
+            steps {
+                milestone(1)
+                kubernetesDeploy(
+                    kubeconfigId: 'kubeconfig',
+                    configs: 'deploy.yaml',
+                    enableConfigSubstitution: true
+                )
+            }
+        }
     }
 }
