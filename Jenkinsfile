@@ -22,7 +22,7 @@ pipeline{
         stage('test'){
             steps{
                 echo 'Testeando la aplicación ...'
-                sh 'sudo npm test'
+                sh 'npm test'
             }
         }
         // Tercera etapa: testeo del código fuente; se analiza el código fuente en busca de errores.
