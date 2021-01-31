@@ -1,7 +1,7 @@
 FROM node
 
 # install simple http server for serving static content
-RUN npm install -g http-server
+RUN npm install 
 
 # make the 'app' folder the current working directory
 WORKDIR /app
@@ -20,4 +20,4 @@ RUN npm run build
 
 EXPOSE 8080
 
-CMD [ "http-server", "build" ]
+CMD ["npm", "run", "dev"]
