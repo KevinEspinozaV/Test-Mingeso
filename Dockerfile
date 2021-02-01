@@ -15,6 +15,8 @@ RUN yarn
 # copy project files and folders to the current working directory (i.e. 'app' folder)
 COPY . .
 
-EXPOSE 8080
+# build app for production with minification
+RUN npm run build
 
-CMD ["npm", "run", "dev"]
+EXPOSE 8080
+CMD ["build"]
