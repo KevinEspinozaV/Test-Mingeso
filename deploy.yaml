@@ -8,7 +8,7 @@ spec:
   type: NodePort
   ports:
   - protocol: TCP
-    port: 4000
+    port: 8080
     nodePort: 32000
 
 ---
@@ -33,4 +33,4 @@ spec:
       - name: node-app
         image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
         ports:
-        - containerPort: 4000
+        - containerPort: 8080
