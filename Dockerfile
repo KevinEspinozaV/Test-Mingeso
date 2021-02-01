@@ -18,7 +18,7 @@ RUN npm install
 COPY . .
 
 # build app for production with minification
-RUN npm run dev
+RUN npm run build
 
-EXPOSE 8080
-CMD ["echo","Corriendo aplicacion"]
+EXPOSE 1200
+CMD ["npm","run","dev"]
