@@ -20,5 +20,5 @@ COPY . .
 # build app for production with minification
 RUN npm run build
 
-EXPOSE 1200
+EXPOSE 4000
 CMD ["npm","run","dev"]
