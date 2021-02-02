@@ -57,12 +57,7 @@ pipeline{
         // Sexta etapa: se sdespliega la aplicación en un cluster de kubernetes.
         stage('Deploy Kubernetes') {
             steps {
-                milestone(1)
-                kubernetesDeploy(
-                    kubeconfigId: 'kubeconfig',
-                    configs: 'deploy.yaml',
-                    enableConfigSubstitution: true
-                )
+                kubernetesDeploy(configs: "deploy.yaml", kubeconfigId: "kubeconfig") 
             }
         }
     }
